@@ -1,3 +1,5 @@
+using System.Data;
+
 class Clients
 {
   private Screen screen;
@@ -60,5 +62,13 @@ class Clients
     this.screen.insert(initialColumn + 1, initialRow + 5, "Telefone:      ");
     this.screen.insert(initialColumn + 1, initialRow + 6, "Confirma (S/N):");
     Console.ReadKey();
+  }
+
+  void LoadCity(String city)
+  {
+    DataSet ds = du.GetOffice(city);
+    lblOutput.Text = "Here are the details for our " + city + " Office";
+    dtlView.DataSource = ds.Tables[0];
+    dtlView.DataBind();
   }
 }
