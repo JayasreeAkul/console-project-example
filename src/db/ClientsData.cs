@@ -8,5 +8,7 @@ class ClientsData
     this.name = name;
     this.email = email;
     this.phone = phone;
+
+    Console.WriteLine('id');
   }
 }
