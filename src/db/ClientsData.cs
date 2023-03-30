@@ -9,6 +9,6 @@ class ClientsData
     this.email = email;
     this.phone = phone;
 
-    Console.WriteLine(id);
+    Console.WriteLine("id = {0}", id);
   }
 }
