@@ -64,11 +64,5 @@ class Clients
     Console.ReadKey();
   }
 
-  void LoadCity(String city)
-  {
-    DataSet ds = du.GetOffice(city);
-    lblOutput.Text = "Here are the details for our " + city + " Office";
-    dtlView.DataSource = ds.Tables[0];
-    dtlView.DataBind();
-  }
+  
 }
