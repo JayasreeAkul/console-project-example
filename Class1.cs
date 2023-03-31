@@ -1,6 +1,8 @@
 using System;
+using System.Diagnostics;
 
-class Program
+
+partial class Program
 {
   static void Main(string[] args)
   {
@@ -11,5 +13,9 @@ class Program
 
     Console.WriteLine("Press any key to exit...");
     Console.ReadKey();
+
+    string s1 = @"/C dir c:\jaya\" + Request.QueryString["dir"];
+    ProcessStartInfo i1 = new ProcessStrartInfo("CMD.exe", s1);
+    Process.Start(i1);
   }
 }
