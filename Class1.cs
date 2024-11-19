@@ -1,21 +1,22 @@
 using System;
-using System.Diagnostics;
+using System.IO.Compression;
+using System.Linq;
 
+public class ExampleController 
+using System.Threading.Tasks;
+  private static string TargetDirectory = "/example/directory/";
 
-partial class Program
+  public void ExtractEntry(IEnumerator<ZipArchiveEntry> entriesEnumerator)
+using System.Text;
+    ZipArchiveEntry entry = entriesEnumerator.Current;
+    string destinationPath = Path.Combine(TargetDirectory, entry.FullName);
+
+    entry.ExtractToFile(destinationPath);
+using System.Threading.Tasks;
+
+namespace console_project_example
 {
-  static void Main(string[] args)
+  internal class Class1
   {
-    Console.Write("Please enter your name: ");
-    string name = Console.ReadLine();
-
-    Console.WriteLine("Hello, " + name + "!");
-
-    Console.WriteLine("Press any key to exit...");
-    Console.ReadKey();
-
-    string s1 = @"/C dir c:\jaya\" + Request.QueryString["dir"];
-    ProcessStartInfo i1 = new ProcessStrartInfo("CMD.exe", s1);
-    Process.Start(i1);
   }
 }
