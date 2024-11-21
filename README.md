@@ -12,7 +12,7 @@ void LoadCity (String city)
 ## About
 An application about DOS, console, money exchange in examples and clients. All of these things together into a single app.
 
-## Getting Started with jaya..........success
+## Getting Started with jaya..........success 2
 ```bash
 $> git clone https://github.com/cristianprochnow/console-project.git
 
